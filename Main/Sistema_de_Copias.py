@@ -23,7 +23,7 @@ def Create_Carp():
         Url = varUrl.replace('\\','/')
         pass
     arcCreate = Url + "prediseñados.txt"
-    try:    
+    try:
         p = open(str(arcCreate), "a")
         pass
     except OSError as q:
@@ -31,7 +31,7 @@ def Create_Carp():
             raise
         pass
     p.close
-    
+
     k1 = bool()
     l1 = bool()
     def imagen(k1, li):
@@ -43,7 +43,7 @@ def Create_Carp():
         if k1:
             k = open(Url + 'ico.png', 'w+b')
             k.write(b'')
-            k.write(b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x10\x00\x00\x00\x10\x08\x02\x00\x00\x00\x90\x91h6\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\x04gAMA\x00\x00\xb1\x8f\x0b\xfca\x05\x00\x00\x00\tpHYs\x00\x00\x0e\xc3\x00\x00\x0e\xc3\x01\xc7o\xa8d\x00\x00\x00\x7fIDAT8O\x8d\x90\xd1\r\xc0 \x08\x05\xdd\xc19\x1c\xa0#t+g\xa9\x1d\xaec\xf4\x11\x12D\x045\xb9\xf0\xf3\xee~H%\x17M\xbb_\x83^\xd3\xf3\r\x01\xe6zU\x834\xb0\xe9\x8a\xea\xda\x0c&\xb6\x87\xc0H\x1a\xd8\xd2P\xb0\xb5\xf9B\xa3\xe0\xd0\xc6\xdd\x07\xda\x96&\x0cf\x1b\x84\x81k\x03?\x88l\xe0\x04k\xdb\xbeua\x83\x1epsb\xf7\x00\x86i4\x98\x86\x00\x864 R\x99\xc4\xb6\x86\xa5Y%r\xf9\x01\x1e9'\xb2\xa8<lQ\x00\x00\x00\x00IEND\xaeB`\x82")       
+            k.write(b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x10\x00\x00\x00\x10\x08\x02\x00\x00\x00\x90\x91h6\x00\x00\x00\x01sRGB\x00\xae\xce\x1c\xe9\x00\x00\x00\x04gAMA\x00\x00\xb1\x8f\x0b\xfca\x05\x00\x00\x00\tpHYs\x00\x00\x0e\xc3\x00\x00\x0e\xc3\x01\xc7o\xa8d\x00\x00\x00\x7fIDAT8O\x8d\x90\xd1\r\xc0 \x08\x05\xdd\xc19\x1c\xa0#t+g\xa9\x1d\xaec\xf4\x11\x12D\x045\xb9\xf0\xf3\xee~H%\x17M\xbb_\x83^\xd3\xf3\r\x01\xe6zU\x834\xb0\xe9\x8a\xea\xda\x0c&\xb6\x87\xc0H\x1a\xd8\xd2P\xb0\xb5\xf9B\xa3\xe0\xd0\xc6\xdd\x07\xda\x96&\x0cf\x1b\x84\x81k\x03?\x88l\xe0\x04k\xdb\xbeua\x83\x1epsb\xf7\x00\x86i4\x98\x86\x00\x864 R\x99\xc4\xb6\x86\xa5Y%r\xf9\x01\x1e9'\xb2\xa8<lQ\x00\x00\x00\x00IEND\xaeB`\x82")
             k.close()
 
         with open(Url + 'ico32.ico', 'a+b') as l:
@@ -52,7 +52,7 @@ def Create_Carp():
             l1 = 1
             pass
 
-        
+
         if l1:
             l = open(Url + 'ico32.ico', 'w+b')
             l.write(b'')
@@ -68,7 +68,7 @@ Create_Carp()
 #----------------------------Variables Globales
 Titulo = str("Sistema de Copias")             #
 Pre = str("Prediseñado")                      #
-Dat = str("Datos")                            #   
+Dat = str("Datos")                            #
 Sb = "$"                                      #
 Blist = arcCreate                             #
 #-----------------------------Estilo de Letras#
@@ -85,9 +85,9 @@ def in_name():
     Ventana_2.configure(width=300, height=100)
     marco_2 = Frame(Ventana_2, borderwidth = 2)
     marco_2.place(relwidth=2, relheight=2)
-    Nombre_Lable_2 = Label(marco_2, text = "Introdusca su nombre: ", font=(Arial_Black, 12), anchor = "center").place(x=20, y=1)        
-    Nombre_Enter_2 = Entry(marco_2, justify = "center", textvariable = Nombre).place(x = 20, y = 23, width = 260, height=23)       
-    Nombre_Button_2 = Button(marco_2, text = "Guardar Nombre", command = safe_list).place(x = 20, y = 55)   
+    Nombre_Lable_2 = Label(marco_2, text = "Introdusca su nombre: ", font=(Arial_Black, 12), anchor = "center").place(x=20, y=1)
+    Nombre_Enter_2 = Entry(marco_2, justify = "center", textvariable = Nombre).place(x = 20, y = 23, width = 260, height=23)
+    Nombre_Button_2 = Button(marco_2, text = "Guardar Nombre", command = safe_list).place(x = 20, y = 55)
     pass
 
 def safe_list():
@@ -96,7 +96,7 @@ def safe_list():
     D_in = str(Directorio.get())
     A_in = str(Adonde.get())
     T_in = str(Tiempo.get())
-    R_in = str(Repetir.get())   
+    R_in = str(Repetir.get())
     Lista_base.append(N_in+ Sb+ D_in+ Sb+ A_in+ Sb+ T_in+ Sb+ R_in)
     write_user()
     crear()
@@ -105,7 +105,7 @@ def safe_list():
 def crear():
     Lista_base.sort()
     global Lista_val
-    Lista_val = [""]  
+    Lista_val = [""]
     for items in Lista_base:
         arreglo = items.split(Sb)
         Lista_val.append(arreglo[0])
@@ -128,12 +128,12 @@ def cargar():
 
 def write_user():
     arc = open(Blist, "w")
-    Lista_base.sort()  
+    Lista_base.sort()
     for items in Lista_base:
         arc.write("")
-        esc = str(items + '\n')         
+        esc = str(items + '\n')
         arc.write(esc)
-        pass          
+        pass
     arc.close()
     pass
 
@@ -143,7 +143,7 @@ def insert():
         arreglo = items.split(Sb)
         if insert == arreglo[0]:
             inicio = messagebox.showinfo("Bienvenido","Inicio correcto a " + arreglo[0])
-            time.sleep(0.5)        
+            time.sleep(0.5)
             Directorio.set(arreglo[1])
             Adonde.set(arreglo[2])
             Tiempo.set(arreglo[3])
@@ -163,7 +163,7 @@ def eliminar():
             Lista_val.remove(arreglo[0])
             quito = 1
             messagebox.showinfo("Eliminar","Elemento "+ delete +" eliminado" )
-        pass 
+        pass
     write_user()
     crear()
     pass
@@ -218,13 +218,13 @@ def verif():
 def Copiar(seg, dir1, dir2, RE):
     global Aviso
     Iniciar_button.configure(state= 'disabled')
-    
+
     for x in range(RE+RE+RE):
         copiando = "copia: " + repr(x)
         start_copia = shutil.copytree(dir1, dir2, ignore = None, dirs_exist_ok=True)
         Aviso = Label(marco, text = copiando , font=(Arial_Black, 12), relief="raised" , anchor = "center", bg= "pale green", fg = "#CDC")
         Aviso.place(x = 201, y = 250, width = 388, height=40)
-        time.sleep(RE)        
+        time.sleep(RE)
         ven = Ventana.winfo_exists()
         if ven == False:
             hilo_copiar.join()
@@ -233,13 +233,13 @@ def Copiar(seg, dir1, dir2, RE):
             print("hola salida")
             sys.exit(Q)
             pass
-        
+
         var = Aviso.winfo_exists()
         if var == True:
             time.sleep(RE)
             Aviso.destroy()
-            pass    
-        pass 
+            pass
+        pass
 
     Iniciar_button.configure(state= 'active')
     time.sleep(2)
@@ -247,7 +247,7 @@ def Copiar(seg, dir1, dir2, RE):
     pass
 #---------------Sistema funcionalidad------------------------------------------------------------------------------
 def inicio():
-    dir1 = Directorio.get() 
+    dir1 = Directorio.get()
     dir2 = Adonde.get()
     seg = int(Tiempo.get())
     veri1 = bool(False)
@@ -270,11 +270,11 @@ def inicio():
                 pass
             else:
                 RE = int(2)
-                pass 
+                pass
             global hilo_copiar
             hilo_copiar = threading.Thread(target = Copiar, args = (seg, dir1, dir2, RE,))
             hilo_copiar.start()
-                
+
         else:
             showerror(title='Error', message='Introdusca una direccion valida o exista')
         pass
@@ -285,7 +285,8 @@ def inicio():
 Ventana = Tk()
 
 Ventana.title(Titulo)
-Ventana.configure(background = "#FFF")
+Ventana.configure(background = "white")
+#Ventana.configure(background = "red")
 Ventana.maxsize(595, 395)
 Ventana.minsize(595, 395)
 Ventana.iconphoto(True, PhotoImage(file='db_copias/ico.png'))
@@ -295,7 +296,7 @@ marco.place(relwidth=1, relheight=1)
 def Logo():
     mlogo= Canvas(Ventana, width=17, height=17, bg="white")
     mlogo_segun = mlogo.create_oval( 2, 2, 15, 15, fill = "blue")
-    
+
     logo = Canvas(Ventana, width = 196, height = 297, bg = "#160013")
     logo.pack()
     logo.place(x = 4, y = 90)
@@ -324,13 +325,13 @@ Lista_base = []
 #---------------Herramientas---------------------------------------------------------------------------------------
 
 #---------------Titulo --------------------------------------------------------------------------------------------
-Titulo_label = Label(marco, text = Titulo, font=(Font, 14), relief = "raised", anchor = "center")
+Titulo_label = Label(marco, text = Titulo, font=(Font, 14),  anchor = "center", bg="Black")
 #---------------columna 0 Prediseñados-----------------------------------------------------------------------------
 Pre_label = Label(marco, text = Pre, font=(Font, 12), relief = "raised", anchor = "center")
 #releta donde de encuentran los usuarios guardados
 ruleta_user = Spinbox(marco, textvariable=User_items)
-ruleta_add = Button(marco, text = "Ins", command = insert, bg = "#dfdfdf", relief="ridge", borderwidth=1, activebackground="#b7faff", activeforeground="grey", font=(Arial_Black, 9))#insertar en el input
-ruleta_del = Button(marco, text = "Quit", command = eliminar, bg = "#dfdfdf", relief="ridge", borderwidth=1, activebackground="#ffc5b7", activeforeground="grey", font=(Arial_Black, 9))
+ruleta_add = Button(marco, text = "Ins", command = insert,  relief="ridge", borderwidth=1, activebackground="#b7faff", activeforeground="white", font=(Arial_Black, 9))#insertar en el input
+ruleta_del = Button(marco, text = "Quit", command = eliminar, relief="ridge", borderwidth=1, activebackground="#ffc5b7", activeforeground="white", font=(Arial_Black, 9))
 #---------------columna 1 Datos-----------------------------------------------------------------------------------
 #Titulo
 Dat_label = Label(marco, text = Dat, relief = "raised", anchor = "center", font=(Font, 12))
@@ -340,14 +341,14 @@ Dir_label1 = Label(marco, text = "Dirección: ", font=Arial_Black, )
 #Entrada para buscar o crear
 Dir_Enter = Entry(marco, justify = "left", textvariable = Directorio, highlightcolor="blue violet", highlightthickness=1)
 #Boton para buscar archivo, o direccion
-Dir_Button = Button(marco, text = "Buscar", width = 10, command = active1, bg = "#dfdfdf", relief="ridge", borderwidth=1)
+Dir_Button = Button(marco, text = "Buscar", width = 10, command = active1, relief="ridge", borderwidth=1)
 #---------------Seccion 2-----------------------------------------------------------------------------------------
 #Direccion a donde Copiar
 Cop_label = Label(marco, text = " - Dirección a donde Copiar", font=Arial, anchor = "nw")
 Cop_Label_Enter = Label(marco, text = "Dirección: ", font=Arial_Black, anchor = "nw")
 #Entrada a donde Copiar
 Cop_Enter = Entry(marco, justify = "left", textvariable = Adonde, highlightcolor="blue violet", highlightthickness=1)
-Cop_Button = Button(marco, text = "Buscar", width = 10, command= active2, bg = "#dfdfdf", relief="ridge", borderwidth=1)
+Cop_Button = Button(marco, text = "Buscar", width = 10, command= active2, relief="ridge", borderwidth=1)
 #---------------Seccion 3------------------------------------------------------------------------------------------
 #Tiempo de espera para Copiar
 Tem_label = Label(marco, text = " - Tiempo espera para Copiar", font=Arial, anchor = "nw")
@@ -360,12 +361,12 @@ Tem_label_Min = Label(marco, text = "Minutos", font=("Arial Black", 11))
 Re_check = Checkbutton(marco, text = "Repetir", var = Repetir)
 #---------------Seccion 5------------------------------------------------------------------------------------------
 #Opciones
-Borrar_button = Button(marco, text = "Borrar", command= del_form, bg = "#dfdfdf", relief="ridge", borderwidth=1, activebackground="#ffc5b7", activeforeground="grey", font=(Arial_Black, 9))
-Guardar_button = Button(marco, text = "Guardar", command= verif, bg = "#dfdfdf", relief="ridge", borderwidth=1, activebackground="#b7faff", activeforeground="grey", font=(Arial_Black, 9))
-Iniciar_button = Button(marco, text = "Iniciar", command= inicio, bg = "#dfdfdf", relief="ridge", borderwidth=1, activebackground="#f5c3f7", activeforeground="grey", font=(Arial_Black, 9))
+Borrar_button = Button(marco, text = "Borrar", command= del_form,  relief="ridge", borderwidth=1, activebackground="#ffc5b7", activeforeground="white", font=(Arial_Black, 9))
+Guardar_button = Button(marco, text = "Guardar", command= verif, relief="ridge", borderwidth=1, activebackground="#b7faff", activeforeground="white", font=(Arial_Black, 9))
+Iniciar_button = Button(marco, text = "Iniciar", command= inicio, relief="ridge", borderwidth=1, activebackground="#f5c3f7", activeforeground="white", font=(Arial_Black, 9))
 #---------------Seccion 6------------------------------------------------------------------------------------------
 #Pie de Pagina
-Label_Autor = Label(marco, text = "Elaborado por Thefeniz", font =(Font, 12), anchor = "center", relief = "raised")
+Label_Autor = Label(marco, text = "Elaborado por MKHERED", font =(Font, 12), anchor = "center", relief = "raised")
 #---------------posicion de los objetos XD-------------------------------------------------------------------------
 def posicion():
     Titulo_label.place(x=1, y=1, width = 588, height = 30)
